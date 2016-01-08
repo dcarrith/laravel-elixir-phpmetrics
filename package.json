@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/dcarrith/laravel-elixir-phpmetrics#readme",
   "dependencies": {
-    "gulp-notify": "^2.2.0",
+    "gulp-notify": "^2.2.0"
   }
 }
