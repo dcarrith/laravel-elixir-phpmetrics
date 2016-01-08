@@ -49,7 +49,7 @@ Elixir.extend('phpmetrics', function(src, options) {
 
         var done = null,
             parameters = null,
-            options = this.options(defaults),
+            options = defaults,
             execute = path.normalize(options.bin);
 
         // generates parameters
