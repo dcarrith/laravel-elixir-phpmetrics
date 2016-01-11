@@ -8,9 +8,9 @@ var phpmetrix = require('gulp-phpmetrix').phpmetrix;
 var Elixir = require('laravel-elixir');
 var Task = Elixir.Task;
 
-Elixir.extend('phpmetrix', function(conf, options) {
+Elixir.extend('phpmetrix', function(args, options) {
 
-    conf = conf || 'phpmetrix.yml';
+    conf = args.conf || ['phpmetrics.yml'];
 
     options = options || {};
 
