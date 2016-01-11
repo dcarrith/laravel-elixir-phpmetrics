@@ -8,15 +8,15 @@ var phpmetrix = require('gulp-phpmetrix').phpmetrix;
 var Elixir = require('laravel-elixir');
 var Task = Elixir.Task;
 
-Elixir.extend('phpmetrix', function(args, options) {
+Elixir.extend('phpmetrix', function(options) {
 
-    conf = args.conf || ['phpmetrics.yml'];
+    options = options || { args: ['conf': 'phpmetrics.yml'] };
 
-    options = options || {};
+    args = options.args || ['conf': 'phpmetrics.yml'];
 
     new Task('phpmetrix', function() {
 
-        return gulp.src(['']).pipe(phpmetrix(conf)).on('error', function(e) { throw e })
+        return gulp.src(['']).pipe(phpmetrix(args.conf)).on('error', function(e) { throw e })
     })
     .watch('./app/**');
 });
