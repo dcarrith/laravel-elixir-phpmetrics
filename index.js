@@ -8,16 +8,8 @@ var Elixir = require('laravel-elixir');
 
 var Task = Elixir.Task;
 
-Elixir.extend('phpmetrics', function(src, options) {
-    src = src || [
-        'app/**/*.php',
-        'bootstrap/*.php',
-        'config/*.php',
-        'database/**/*.php',
-        'public/*.php',
-        'resources/**/*.php',
-        'test/**/*.php'
-    ];
+Elixir.extend('phpmetrix', function(config, options) {
+    config = config || ['phpmetrix.yml'];
 
     options = options || {};
 
@@ -41,11 +33,11 @@ Elixir.extend('phpmetrics', function(src, options) {
             }
         },
         defaults = {
-            bin: 'phpmetrics'
+            bin: 'phpmetrix'
         },
         done = null;
 
-    new Task('phpmetrics', function() {
+    new Task('phpmetrix', function() {
 
         var done = null,
             parameters = null,
@@ -81,8 +73,8 @@ Elixir.extend('phpmetrics', function(src, options) {
 
                 notify.onError({
                     title: 'Laravel Elixir',
-                    subtitle: 'PHPMetrics Failed',
-                    message: stderr ? stderr : 'Task PhpMetrics: failed.',
+                    subtitle: 'PHPMetrix Failed',
+                    message: stderr ? stderr : 'Task PhpMetrix: failed.',
                     icon: path.join(__dirname, '../laravel-elixir/icons/fail.png')
                 })(error);
             }
