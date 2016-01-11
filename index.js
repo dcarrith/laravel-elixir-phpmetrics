@@ -15,23 +15,7 @@ Elixir.extend('phpmetrix', function(config, options) {
     options = options || {};
 
     new Task('phpmetrix', function() {
-
-        var done = null,
-            config = config,
-            options = options;
-
-        phpmetrix(config, options, function(err) {
-            if (err) {
-                onError(err);
-            } else {
-                notify({
-                    title: 'Laravel Elixir',
-                    message: 'PHPMetrics analysis complete!',
-                    icon: path.join(__dirname, '../laravel-elixir/icons/pass.png'),
-                    onLast: true
-                });
-            }
-        });
+        return gulp.src(["phpmetrics.yml"]).pipe(phpmetrix({args: ['phpmetrics.yml']})).on('error', function(e) { throw e })
     })
     .watch('./app/**');
 });
