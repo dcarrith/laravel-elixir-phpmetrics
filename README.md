@@ -19,22 +19,31 @@ $ npm install dcarrith/laravel-elixir-phpmetrix --save-dev
 ```javascript
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-phplint');
 require('laravel-elixir-phpmetrix');
 
 elixir(function(mix) {
-  mix.phpmetrix();
-}
+    mix.phpmetrix('phpmetrix.yml');
+});
 ```
 ### Advanced Example
 
 ```javascript
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-phplint');
 require('laravel-elixir-phpmetrix');
 
 elixir(function(mix) {
-  mix.phpmetrix(['config.yml']);
-}
+    mix.sass('app.scss');
+    mix.phplint([
+        'app/**/*.php',
+        'test/**/*.php'
+    ])
+    .phpSpec()
+    .phpUnit();
+    mix.phpmetrix('phpmetrix.yml');
+});
 ```
 
 ## Credits
