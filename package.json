@@ -1,5 +1,5 @@
 {
-  "name": "laravel-elixir-phpmetrics",
+  "name": "laravel-elixir-phpmetrix",
   "version": "0.1.0",
   "description": "PHPMetrics Plugin for Laravel's Elixir",
   "main": "index.js",
@@ -8,20 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:dcarrith/laravel-elixir-phpmetrics.git"
+    "url": "git@github.com:dcarrith/laravel-elixir-phpmetrix.git"
   },
   "keywords": [
     "phpmetrics",
     "php-metrics",
+    "phpmetrix",
     "elixir",
     "laravel"
   ],
   "author": "David Carrithers",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dcarrith/laravel-elixir-phpmetrics/issues"
+    "url": "https://github.com/dcarrith/laravel-elixir-phpmetrix/issues"
   },
-  "homepage": "https://github.com/dcarrith/laravel-elixir-phpmetrics#readme",
+  "homepage": "https://github.com/dcarrith/laravel-elixir-phpmetrix#readme",
   "dependencies": {
     "gulp-notify": "^2.2.0"
   }
