@@ -10,13 +10,13 @@ var Task = Elixir.Task;
 
 Elixir.extend('phpmetrix', function(options) {
 
-    options = options || { args: ['conf': 'phpmetrics.yml'] };
+    options = options || { args: { conf: 'phpmetrics.yml' }};
 
-    args = options.args || ['conf': 'phpmetrics.yml'];
+    args = options.args || { conf: 'phpmetrics.yml' };
 
     new Task('phpmetrix', function() {
 
-        return gulp.src(['']).pipe(phpmetrix(args.conf)).on('error', function(e) { throw e })
+        return gulp.src(['']).pipe(phpmetrix(options)).on('error', function(e) { throw e })
     })
     .watch('./app/**');
 });
