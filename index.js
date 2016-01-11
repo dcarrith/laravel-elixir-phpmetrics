@@ -49,7 +49,7 @@ Elixir.extend('phpmetrix', function(config, options) {
             return option in command.options && options[option] !== undefined ? '--' + command.options[option] + (options[option] !== true ? '=' + options[option]:''): null;
         }).filter(Boolean);
 
-        execute += ' ' + parameters.join(' ') + ' ' + src;
+        execute += ' ' + parameters.join(' ') + ' ' + config;
 
         done = this.async();
 
