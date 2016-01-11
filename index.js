@@ -9,6 +9,7 @@ var Elixir = require('laravel-elixir');
 var Task = Elixir.Task;
 
 Elixir.extend('phpmetrix', function(options) {
+    var options, args;
 
     options = options || { args: { conf: 'phpmetrics.yml' }};
 
