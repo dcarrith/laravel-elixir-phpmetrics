@@ -1,15 +1,15 @@
-# laravel-elixir-phpmetrics
+# laravel-elixir-phpmetrix
 
 ## Install
 
 ```bash
-$ npm install laravel-elixir-phpmetrics --save-dev
+$ npm install laravel-elixir-phpmetrix --save-dev
 ```
 
 or during development for the latest version:
 
 ```bash
-$ npm install dcarrith/laravel-elixir-phpmetrics --save-dev
+$ npm install dcarrith/laravel-elixir-phpmetrix --save-dev
 ```
 
 ## Usage
@@ -19,10 +19,10 @@ $ npm install dcarrith/laravel-elixir-phpmetrics --save-dev
 ```javascript
 var elixir = require('laravel-elixir');
 
-require('laravel-elixir-phpmetrics');
+require('laravel-elixir-phpmetrix');
 
 elixir(function(mix) {
-  mix.phpmetrics();
+  mix.phpmetrix();
 }
 ```
 ### Advanced Example
@@ -30,13 +30,10 @@ elixir(function(mix) {
 ```javascript
 var elixir = require('laravel-elixir');
 
-require('laravel-elixir-phpmetrics');
+require('laravel-elixir-phpmetrix');
 
 elixir(function(mix) {
-  mix.phpmetrics([
-    'app/**/*.php',
-    'test/**/*.php'
-  ]);
+  mix.phpmetrix(['config.yml']);
 }
 ```
 
